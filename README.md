@@ -18,7 +18,7 @@ docker run \
 --device=/dev/mem:/dev/mem:rw \
 --device=/dev/knx:/dev/knx \
 --cap-add=SYS_MODULE --cap-add=SYS_RAWIO \
---restart unless-stopped ghcr.io/ptr33/knxd-docker:main
+--restart unless-stopped ghcr.io/ptr33/knxd-docker
 ```
 
 Test the knx server by login to the container and run e.g.
