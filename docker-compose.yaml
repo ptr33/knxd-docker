@@ -2,11 +2,12 @@ version: "3.7"
 services:
   knxd:
     container_name: knxd
-    build:
-      context: .
-      dockerfile: Dockerfile
-#      args:                                                                      
-#        KNXD_VERSION: 0.14.39
+    image: ghcr.io/ptr33/knxd-docker
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+##      args:                                                                      
+##        KNXD_VERSION: 0.14.39
     ports:
       - "6720:6720/tcp"
       - "3671:3671/udp"
