@@ -2,7 +2,12 @@ name: Docker Multiplatform
 
 on:
   push:
-    branches: [master]
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - main
+    # Publish `v1.2.3` tags as release `1.2.3`.
+    tags:
+      - v*
   workflow_dispatch:
     inputs:
       reason:
