@@ -1,9 +1,10 @@
 # knxd-docker
 
-Build the container with specific version of KNXD.
+Build the container with specific version of KNXD. The container is using a multi-stage build, which
+reduces the final container size from 414 MBytes to 16.5 MBytes.
 
 ```bash
-docker build -t ptr33/knxd-docker --build-arg KNXD_VERSION=0.14.39 .
+docker build -t ptr33/knxd-docker --build-arg KNXD_VERSION=0.14.72 .
 ```
 
 The container is automatically built using GitHub actions and published on ghcr.io in https://github.com/ptr33/knxd-docker/pkgs/container/knxd-docker
