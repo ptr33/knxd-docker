@@ -1,4 +1,4 @@
-FROM alpine:3.22 AS builder
+FROM alpine:3.23 AS builder
 
 ENV LANG=C.UTF-8
 RUN set -xe \
@@ -51,7 +51,7 @@ RUN  find /install -type f -executable -exec strip --strip-unneeded {} + 2>/dev/
 #    && pause
 
 # Runtime stage - minimal image with only runtime dependencies
-FROM alpine:3.22
+FROM alpine:3.23
 
 # Install only runtime dependencies
 RUN set -xe && \
